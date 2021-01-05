@@ -1,0 +1,161 @@
+/* Features */
+/* This is a comment 
+which can break to multiple line 
+*/
+
+/*
+** try to be readable and efficient while fast and scalable
+** compiled language
+** statically strong typed with type inference 
+** minimal and simple language
+** every type has a nature which is eighter mutable or immutable which can be change via var or let
+** block defined by {}
+** simicolon required
+** prefere functions over keywords
+** variable defined by let and const are block level scoped variables */
+** let and const also make variable mutable
+** var are global scoped and local scoped not block scoped.
+** if body of the block was single line {} can be ommited.
+
+*/
+
+
+/* const **
+** must know at compile time
+** cannot change after init
+** it must initialize when we define it.
+*/
+
+const PI: float = 3.14;
+const e: 2.17;    /* compile can detect type by value this called type inference */
+
+
+/* let 
+** create immutable data **
+** must known in runtime
+** can be empty when declared
+** cannot change after initialize 
+*/
+
+let name: string = "John Doe";
+name = "Kate Doe" /* error */
+
+let are_we_cool = true;     /* type inference */
+let some_value: string;	    /* defualt value for string is '' */
+
+
+
+/* ------------------
+** var 
+** create mutable data **
+** can change after initialize 
+** --------------------- */
+var age: int = 42;
+age = 43;  /* age change to 43 */
+
+var x = 1;    /* type inference */
+
+
+/* list
+** Nature: Mutable
+** can have value from diffrent data types
+
+*/
+var items = [1, 1.1, "John", ['a', 10]];
+
+/* compile detect type's of each value */
+/* equivalent of above code */
+var items: list[int, float, string, list[char, int]] = [1, 1.1, "John", ['a', 10]];
+
+
+items[0] = true;   /* change a value by index */
+items[-1][0] = "hello";   /* change first item of last item which is another list */
+
+let a_list = [1, 'a', true];
+a_list[0] = 2;    /* error, cannot change data of immutable variable */
+
+
+/* dict 
+** Nature: mutable
+** key valur pair data structure 
+** key must be eighter int, string or tuple (the data types they are immutable by nature.)
+*/
+
+var person = ["name": "John Doe", "age": 42];
+person["name"];    /* John Doe */
+person["country"] = "Uknown";
+
+/* manually declare dict with tyeps */
+var person: dict[string: string, string, int] = ["name": "John Doe", "age": 42];
+
+/* immutable dict */
+let person: dict[string: string, string, int] = ["name": "John Doe", "age": 42];
+person["country"] = "USA";    /* error cannot add key to immutable dict */
+
+/* tuple
+** Nature: immutable
+** can have diffrent value with with different data type **
+** parantesis is required
+*/
+
+let t: tuple[int] = (1,)    /* tupple with one value */
+let t = (1, 1.1, 'a', "hello");
+
+/* tuple can have name */
+let me = (number: 18, color: "Balck", singer: "Dariush", geek: true);
+/* access data */
+me.number     /* 18  */
+
+
+/* loop 
+** they are only one loop 
+** it can iterate or collection or iterate based on a condition
+*/
+
+let items = [1, 1.1, 'a', "hello"];
+loop item in items {
+	print(item);	
+}
+
+let counter = 0;
+loop counter <= 10 {
+	print("counter is ", counter, "right now.");
+	counter += 1;
+}
+
+/* if else if else */
+** is a expression 
+*/
+let age = 19;
+let can_vote = if age > 17 true else false;
+let result = if can_vote "You can vote" else "Not yet";
+print(result):
+
+let x = 0;
+let res = if x > 0 {
+	print("greeter than zero");
+} else if x < 0 {
+	print("less than zero");
+} else {
+	print("zero")
+} /* zero */
+print(res); /* null */
+
+
+/* match 
+** is a expression
+*/
+
+
+/* Fuctions */
+/* There is two type of function is tina lang
+** one type is normal function with define by `function` keyworkd
+** second is ananymous, single line function which defined by `=>` symbol
+*/
+
+function add2(x: int, y: int) -> int {
+	return x + y;
+} 
+
+
+let add = (x: int, y: int) -> int => x + y;
