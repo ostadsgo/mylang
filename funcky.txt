@@ -1,0 +1,83 @@
+// a programming language without pre reserved keyword
+
+// create variables
+x = 10;
+name: string = "John Doe";
+
+add = (x: int, y: int) -> int {
+	return x + y;
+}
+
+
+add(2, 3);   // 5
+
+
+// anynmous function
+(x: int, y: int) -> int {
+	return x + y;
+}
+
+// empty function
+// in function defenetion we have to specify prameters types if exsits and return type
+
+
+// importing
+math = import("math");
+custom_lib = import("path/for/the/lib");
+
+
+// list
+x = [1, 2, 3, "hello", 1.2, [1, 2, 3]];
+
+// array
+a: array[int, 5] = [1, 2, 3, 4, 5];
+
+// dict
+person: dict[string, string] = ["name": "John Doe", "age": "12"];
+
+// tuple
+t: tuple[int] = (1, 2);
+// a name can be bound to a tuple
+t: tuple[int, string] = (code: 1, message: "something");
+code, message = t  // unpacking the tuple t
+
+
+// if is a function that you always overwrite it 
+// meaning you define that a body
+// it is a function so it can be return a value
+
+if(condition) {
+	// body
+}
+
+// if a function dosen't required any prameter we can ommit ()
+// which we did it in else function
+
+x = 10;
+res = if(x > 10) {
+	x += 1;
+	return x
+} elseif(x < 10) {
+	x -= 1
+	return x
+} else {
+	return x
+}
+
+// loop also is function which can work in diffrent format
+// like so
+// it can get a condition and act like while loop
+// loop can return any value but if you do so after seen return the loop
+// will over.
+
+i = 0;
+while(i < 10){
+	i += 1
+}
+
+names: array(string, 3) = ["John Doe", "Sam Smith", "Jane Doe"]; 
+for(name, names) {
+	print(name);
+}
+
+

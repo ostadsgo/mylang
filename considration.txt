@@ -1,0 +1,8 @@
+* tuples are immutable by nature and as it's nature is it should be stay immutable meaning don't we have ability to extend it.
+if tuple has a name the syntax t.name is nice but if it doesn't have name I think t.0, t.1 is not nice and it is not compitable with list indexing. t[name] t[index] looks fine but not well I don't know what to do
+
+* Sometimes I think to create a programming language without any keywork, I want to make it all functions.
+is it possiable, yes of course it  is possiable but I don't know exactly how many advantages that type
+of language had
+
+* for commenting I may need to use # and #[ ]#
