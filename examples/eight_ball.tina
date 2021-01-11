@@ -1,0 +1,22 @@
+const rand = import("random", ["randrange"]);
+
+
+/* I am number between 1 to 99 can you guess me in 10 chance? */
+
+random_number = randrange(1, 100);
+
+var counter = 0;
+
+loop counter < 10 {
+	let user_guess = int(input("Enter your guess: "));
+
+	if user_guess == random_number {
+		print("Congragulation your guess is correct.");
+		break
+	} else if user_gess > random_number {
+		print("You guess is high, try to gess low.");
+	} else {
+		print("Your guess is low, try to guess high.")
+	}
+}
+

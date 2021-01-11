@@ -157,5 +157,26 @@ function add2(x: int, y: int) -> int {
 	return x + y;
 } 
 
-
+/* lambda functions are single line and anonymous functions */
 let add = (x: int, y: int) -> int => x + y;
+
+
+/* import and export */
+/* import and export is not keyword they are functions
+** import allows developer to import any file from the language 
+** and use its exported functions and variables 
+**/
+
+import("math");
+print(math.PI);  /* 3.14159 */
+
+const m = import("math");
+m.PI;
+
+import("math", ["sin", "cos", "tan"]);
+import("math", "*");
+
+export(f1);
+export([f1, f2, f3]);
+export([a, b, f1, f2]);
+export("*");

@@ -1,0 +1,23 @@
+I know why python use lambda keyword instead of => function
+I think => symbol is kinda cool and sexy but it can be conbersom and unreadable
+comparing `lambda` keyword
+
+example:
+map((x, y) => x + y, [1, 2, 3, 4], [4, 3, 2, 1]);
+map(lambda x, y: x + y, [1, 2, 3, 4], [4, 3, 2, 1])
+
+I didn't figure out if a tuple defined by `var` that's mean it is immutable meaning 
+can we extend it? so it is become list, but tuple can have name it will make it differ from list.
+
+Range
+I can use syntax like 1..10 to create exclusive range meaning the 10 in the example will show up in the 
+where it supposed to show up.
+it is hard and unreadable to create range of thing with `..` symbol doing reverse step makes it hard 
+and limited so I didn't decide to put it in the syntax list
+but it can be use something like this
+'a'..'z'
+and from this example I know the the range should be exculsive beacuse who knows what char comes from after
+'z' to make the 'z' included.
+alternitive syntax can be look like
+'a':'z' it is look like dict I don't like it
+I think I will stay from python in this one

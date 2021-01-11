@@ -1,0 +1,15 @@
+/* is even or odd */
+function is_even(number: int) -> bool {
+	return number % 2 == 0;
+}
+
+/* is prime or not */
+function is_prime(number: int) -> bool {
+	loop n in range(2, number ** .5) {
+		if number % n == 0 {
+			return false;
+		}
+	}
+	return true;
+}
+
