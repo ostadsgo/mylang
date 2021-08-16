@@ -81,3 +81,6 @@ for(name, names) {
 }
 
 
+var names: Array<String> = ["John", "Jane", "Kate"];
+var names: Array<String> = Array("John", "Jim", "Bob");
+var names: Array[String] = ["John", "Jane", "Kate"];
