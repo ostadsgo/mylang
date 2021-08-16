@@ -6,3 +6,6 @@ is it possiable, yes of course it  is possiable but I don't know exactly how man
 of language had
 
 * for commenting I may need to use # and #[ ]#
+
+For systemic stuf like pointer and address of we can use pointer() address() functions and avoid using * , &
+

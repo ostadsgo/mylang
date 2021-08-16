@@ -21,3 +21,12 @@ and from this example I know the the range should be exculsive beacuse who knows
 alternitive syntax can be look like
 'a':'z' it is look like dict I don't like it
 I think I will stay from python in this one
+
+
+which one should I use?
+
+let names: array[string; 5] = ["John", "Sam", "Jeff", "Marry", "Bat"]; 
+
+let names: array(string; 5) = ["John", "Sam", "Jeff", "Marry", "Bat"]; 
+
+let names: array<string; 5> = ["John", "Sam", "Jeff", "Marry", "Bat"]; 
