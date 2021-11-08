@@ -1,0 +1,7 @@
+print("Hello World!");
+
+// If there is main function programm will start from the main function
+
+let main = () { 
+	print("Hello World!");
+}

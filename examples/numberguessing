@@ -1,0 +1,35 @@
+
+import("random", "randrange");  // import("random", "*")
+
+let number = randrange(1, 100);
+for {
+	let guess = Int(input("Enter a guess: "));
+	let status = match true {
+		guess > number { "Guess low"; }
+		guess < number { "Guess high"; }
+		guess == number { "You win."; }
+		else {"Some unkown situation happend!!"; }
+	}
+	print(status);
+}
+
+
+
+// comparing with python version
+from random import randrange
+
+number = randrange(1, 100);
+while True:
+	guess = int(input("Enter a guess: "));
+	status = ""
+	if guess > number: 
+		status = "Guess low."
+	elif guess < number:
+		status = "Guess high."
+	elif guess == number:
+		status = "You win"
+	else:
+		status = "Some unkown situation happend!!"
+	print(status)
+
+

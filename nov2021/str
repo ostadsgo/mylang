@@ -1,0 +1,33 @@
+let name = "John Doe";
+
+assert(name[0] == 'J');
+
+var name = "Saeed Gholami";
+name[3] = 'i';
+assert(name == "Saeid Gholami");
+
+// Types doesn't have mutilblity or imutablity by defulat
+// mutiblity or imutiblity comes from `let` and `var` keyword
+// In a string if you defined it with `let` obviously you can't mutated it
+let name = "John Doe";
+name[0] = 'X'; // Error
+
+var name = "John Doe";
+name[0] = 'B';  // Ok
+
+name[0:4] = "Jim";
+name = "Something else";
+
+var name = "Hello"; // Shadowning error.
+
+// String interpolation
+let name, age = "John Doe", 42;
+let msg = "My name is {name} and I am {age} years old.";
+print(msg);  // My  name is John Doe and I am 42 years old.
+
+
+
+
+
+
+

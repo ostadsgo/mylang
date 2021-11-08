@@ -1,0 +1,58 @@
+ 
+
+let names: tuple[int, string, float] = [1, "hello", 1.2];
+
+let tuple[int, string, float] mytuple = [1, "hi", 3.14];
+
+<modifier> <type[subtype]> <name> = <value> ;
+
+let tuple[int, string] = ["hi", "a", "b", 1, 2, "c"];
+
+let a, b, c = mytuple;  // tuple unpacking
+
+
+let array[int, 3] numbers = [1, 2, 3];
+
+let l = ["hi", 1, 2.1];  // let list[string, int, float] l = ["hi", 1, 1.2];
+
+true, flase, null
+int, string, float
+
+list, tuple, array, dict, 
+
+let person[string:string] = [
+	"name": "John Doe",
+	"age": "33",
+	"location": "Unknown",
+];
+
+let global_value;  // Type of gloval is Null value of it is null
+let null_value_variable = null;
+for key in person {
+	if "name" in person.keys() => print("name found");
+	print(key);
+	if "name" in person.keys() {
+		global_value = "What ever you want.";
+}
+
+
+// alias a type or struct
+let Person = type {
+	var string name;
+	var int age;
+	var string location;
+}
+
+peter = Person();
+peter.name = "Peter Parker";
+peter.age = 19;
+peter.location = "NY";
+
+let person = alias(Person);
+
+thor = person();
+thor.name = "Thor";
+thor.age = 23;
+thor.location = "Norway";
+
+

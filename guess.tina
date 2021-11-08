@@ -1,0 +1,51 @@
+// version 1
+let rand = import("random");
+let number = rand.randrange(1, 100);
+
+for {
+	guess = int(input("Take a guess.");
+	if guess > number {
+		print("geuss small");
+	} else {
+		if guess < number {
+			print("guess bigger.");
+		} else {
+			print("You win!");
+		}
+	} // end outer else
+}
+
+// version 2
+import("random", "randrange");
+
+let number = randrange(1, 100);
+
+for {
+	guess = int(input("Take a guess. "));
+	match guess {
+		> number => print("Guess smaller.");
+		< number => print("Guess bigger.");
+		else => print("You win!");
+	} // end of match
+} // end forever loop
+
+// version 3
+import("random", "randrange");
+
+let number = randrange(1, 100);
+let compare = (int guess, int number) -> bool {
+	if guess > number => true;
+	if guess < number => false;
+}
+for {
+	guess = int(input("Take a guess. "));
+	match compare(guess, number) {
+		is true => print("Guess low.");
+		is false => print("Guess big.");
+		else { 
+			print("You win.");
+			break;
+		}
+	} // end of match
+}
+

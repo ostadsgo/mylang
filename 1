@@ -1,0 +1,151 @@
+int number;  # 0
+number = 0;
+
+number = 1;
+
+
+number := 0;
+number = 5;
+
+int number := 0;
+number = 10;
+
+var number = 10;
+number = 11;
+
+var number: int = 10;
+number = 11;
+
+var int number = 10;
+var int number;
+
+let string name;
+name = "John Doe";
+name = "Something"  # error
+
+function sum(int a, int b) -> int {
+	return a + b;
+}
+
+function sum(int a, int b) -> int => a + b;
+(int a, int b) -> int => a + b;
+
+match number {
+	1 => print("It is one.");
+	range(1, 10) => ("It is single digit.");
+	range(10, 100) {
+		print("Something.");
+		print("Something.");
+	}
+	else => print("Something.");
+}
+
+let sum = (int a, int b) -> int => {
+	print('adding a and b');
+	a + b;
+}
+
+let sum = (int a, int b) -> int => a + b;
+
+sum(2, 4);
+
+let Arry[Int, 5] numbers = [1, 2, 3, 4, 5];
+let List[String, Float, Int] stuff = ["Hello", 3.14, 1];
+
+
+let Person = struct {
+	String name;
+	Int age;
+	String addressi = "USA";
+}
+
+john = Person("John", 23, "London");
+john.name;
+john.age;
+
+String s = "This is a string";
+
+len(s);
+
+if name.len <= 5 {
+	print("Name must be bigger than 5 characters.");
+} else {
+	print("Thank you.");
+}
+
+
+for item in stuff {
+	print(item);
+}
+
+for i in range(10) {
+	print(i);
+}
+
+
+stuff.filter(item => item == "tech");
+filter(item => item == "tech", stuff);
+
+s.cut(1, 10);
+s.cut(-1, -10, -2);
+s[-1:-10:-2];
+
+range(1, 20, 2)
+1..20..2
+range(-20, -1, -2);
+-20..-1..-2
+
+import()
+export("sum")
+export("*");
+export("*", except=["stuff", "numbers"]);
+
+export("sum", "mul");
+
+import("random");
+import("math/random");
+random.randint(1, 20);
+let mymod = import("C:\code\hello.tina");
+mymod.greeting("Hi", "John");
+import("math/random", in=["randint", "randrange", "choice"]);
+
+match days {
+	is not String => print("Days must be string.");
+	"Saturday" | "Sunday" => print("Work off day.");
+	in ["Monday", "Tuesday", "Thursday", "Friday"] => {
+		print("Work day");
+		print("Get ready for the day.");
+	}
+	else => print("None of the above executed.");
+}
+
+
+var, let
+
+if, for, match
+
+(params), struct
+
+import(), export()
+
+open = import("file")
+
+let myfile = open.file("hello.txt")
+if myfile is not None {
+	print("Do you stuff");
+} else {
+	print("File not found!");
+}
+
+
+let Dict[String: String] person;
+
+person["name"] = "John Doe";
+person["age"] = 42;
+person["Whatever"] = "Whatever";
+Dict(name="", age="", country="");
+
+
+
+
+
