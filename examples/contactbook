@@ -1,0 +1,98 @@
+let menu = """
+1) Add contact 
+2) Update contact
+3) Delete contact
+4) Display contact
+5) Exit 
+""";
+
+var [string: string] contact;  // let contact = Map(string, string);
+
+print(menu);
+let response = input("> ");
+match response {
+	"1" {
+		let name = input("Enter a name: ");
+		let phone = input("Enter a phone number: ");
+		contact[name] = phone;
+		print("Contact created succesfully.");
+	}
+	"2" {
+		let name = input("Enter the contact name: ")
+		if name in contact: 
+			new_phone = input("Enter new phone for the contact");
+			contact[name] = new_phone;
+			print("Contact successfully updated!");
+		} else {
+			print("Contact not found!");
+		} // end of else
+	}
+	"3" {
+		let name = input("Enter the contact name: ");
+		if name in contact { contact.popitem(name); }
+		else { print("Contact not found"); }
+	}
+	"4" {
+		for name, phone in contact.items() { 
+			print("{name.title()} {phone}");
+		}
+	}
+	"5" {
+		let os = import("os");
+		print("Goodbye.");
+		os.exit();
+	}
+	else { print("Invliad option, please choice from menu."); }
+		
+} // end of math expression
+
+
+
+
+// Python version
+menu = """
+1) Add contact 
+2) Update contact
+3) Delete contact
+4) Display contact
+5) Exit 
+"""
+
+contact = {}  
+
+print(menu)
+response = input("> ")
+
+if response == "1": 
+	name = input("Enter a name: ")
+	phone = input("Enter a phone number: ")
+	contact[name] = phone
+	print("Contact created succesfully.")
+		
+elif response == "2": 
+	name = input("Enter the contact name: ")
+	if name in contact: 
+		new_phone = input("Enter new phone for the contact")
+		contact[name] = new_phone
+		print("Contact successfully updated!")
+	else 
+		print("Contact not found!")
+
+elif response == "3":
+	name = input("Enter the contact name: ")
+	if name in contact :
+		contact.popitem(name)
+	else:
+		print("Contact not found")
+
+elif response == "4":
+		for name, phone in contact.items() 
+			print("{name.title()} {phone}")
+
+elif response == "5":
+		os = import("os")
+		print("Goodbye.")
+		os.exit()
+else: 
+	print("Invliad option, please choice from menu.")
+		

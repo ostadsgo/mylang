@@ -1,0 +1,62 @@
+// when you the init value
+let num = 10;
+
+// when you know type
+int num;
+assert(num == 0);
+
+let num;   // error cannot determine the type. add type or init value;
+
+
+
+// so every type need to be have init value.
+// let's go with function
+(int a, int b) -> int {
+	return a + b;
+}
+
+// types in collections
+
+let Array[int] numbers = [1, 2, 3];
+let numbers = [1, 2, 3];
+
+var Array[int] numbers;
+numbers.append(1);
+
+// empty array
+let Array[int] nums;
+
+// empty array
+let nums = Array(int);
+
+
+(Arry[int] numbers) -> bool {
+	if numbers.length > 5 {
+		return true;
+	}
+	return false;
+}
+
+(array[int] numbers) -> bool {
+	return true;
+}
+
+
+// create map aka dict
+let data = Map(string, string);
+
+let Map[string:string] data;
+
+let user = ["username": "john", "password": "asdfafd"];
+
+// if you have the init value alwayse use `let`
+// if you don't have the init value if you have type fan use type first approch
+// if you don't use constractor approch
+
+
+	
+
+
+
+
+

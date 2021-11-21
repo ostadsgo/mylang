@@ -26,8 +26,3 @@ let msg = "My name is {name} and I am {age} years old.";
 print(msg);  // My  name is John Doe and I am 42 years old.
 
 
-
-
-
-
-
