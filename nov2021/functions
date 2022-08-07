@@ -1,0 +1,32 @@
+// If there is a main function program flow start from main function.
+
+let main = () {
+	print("hello world!");
+}
+
+// functions are ananymous by defualt
+(int a, int b) -> int {
+	return a + b; 
+}
+
+// last statement is the return value so you can ommit return if you like to.
+(int a, int b) -> int {
+	a + b; 
+}
+
+// returning multiple values
+let foo = () -> int, int {
+	return 1, 2;
+}
+
+let x, y = foo();
+
+// symbol visibility 
+// everything is private use export function to make them avilable in other files
+export(foo);
+export("*"); // make all symbols public to any files
+export(exclude=[foo, add]); // export everthing except foo and add 
+export([foo, add]); // export just foo and add
+
+
+

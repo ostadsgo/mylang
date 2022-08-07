@@ -1,0 +1,53 @@
+// am I need to make if else as expression?
+// am I need to forget about else if cluse?
+
+let value = 10;
+
+if value > 0 {
+	print("It is bigger than zero.");
+} else {
+	print("It is less than zero.");
+}
+
+
+if value > 0 {
+	print("It is bigger than zero.");
+} else if value == 0 {
+	print("It is zero.");
+} else {
+	print("It is less than zero.");
+}
+
+
+let result? = if value > 0 {
+	print("It is bigger than zero.");
+} else if value == 0 {
+	print("It is zero.");
+} else {
+	print("It is less than zero.");
+}
+
+print(result); // null
+
+
+let a, b = 10, 20;
+
+if a > b {
+	print(a);
+} else {
+	print(b);
+}
+
+if a > b {
+	a;
+} else {
+	b;
+}
+
+let max = if a > b {a;} else {b;}
+
+// I think it is ok to make my if stetment to be an expression
+// been if as expression make get rid off terreny need.
+
+
+

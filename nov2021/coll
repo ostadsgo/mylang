@@ -1,0 +1,41 @@
+// array same type collection
+
+let numbers = [1, 2, 3];
+
+let [int] numbers;  // create empty list named numbers; it is not useful cuz it is imutable we can't add value to it
+// same above
+let numbers = [];
+
+var [int] numbers;
+numbers.append(1);
+numbers.append(2);
+numbers.append(3);
+numbers.extend(3, 2, 1, 2);
+
+
+// Map
+
+let person = ["name": "John Doe", "age": "42"];
+person["name"];  // John Doe
+
+var [string:string] person;
+person["location"] = "London";
+
+
+// Set; You need to specify the type 
+
+let Set[int] nums = [1, 1, 1, 2, 3, 1, 2];  // Set([1, 2, 3]);
+let nums = Set(type=int, values=[1, 2, 1, 1, 1, 2, 3]);
+let nums = Set([1, 2, 1, 1, 1, 2, 3], type=int);
+let nums = Set([1, 2, 1, 1, 1, 2, 3]);  // You can omit the compiler know the type with you init values.
+
+// dynamic set
+var Set[int] numbers;
+numbers.append(1); 
+
+
+// Tuple : we don't need tuple becuase our `let` and `var` keyword can be acct like tuple.
+
+
+
+

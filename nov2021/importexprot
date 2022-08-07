@@ -1,0 +1,44 @@
+// import a moudle - moudle is a the lang file
+
+import("random"); // import random moudle 
+
+// using randrange of the random moudle to create a random number between 1 to 100
+let rand_number = random.randrange(1, 100);
+
+// import everything
+import("random", "*");
+
+choice(["Hi", "Hello", "Howday"]);
+
+// import specific identities
+import("random", ["randrange", "randint", "choice"]);
+
+
+
+// export 
+// Every symbol or identity is private by defualt
+// you can't use moudle symbols in another moudle unless you export that identitly
+// to do so we use export function as so: 
+
+let add = (int a, int b) -> int { return a + b; }
+let mul = (int a, int b) -> int { return a * b; }
+let minus = (int a, int b) -> int { return a - b; }
+let div = (int a , int b) -> float {
+	if b == 0 {
+		return ZeroDivisionError("Can't divid by zero");
+	}
+	return a / b;
+}
+
+// export one
+export(add);
+
+// export multiples
+export([add, minus, mul]);
+
+// export all
+export("*");
+
+// export beside 
+export(exclude=[mul, add]);
+
