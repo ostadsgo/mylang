@@ -1,0 +1,49 @@
+const abc = import("abstract");
+
+
+
+@abc.abstract
+class Person(name: string, age: int): Human 
+{
+	function info(name: string, age: int) -> string = "";
+	const info: string = (name: string, age: int) => "";
+	
+	function set_age(age: int) -> bool 
+	{
+		if age <= 0 { return false };
+		return true;
+	}
+}
+
+
+@abc.abstract
+class Person(string name, int age): Human 
+{
+	#private
+	{
+		function info(self, string name, int age) -> string = "";
+		const info = (name: string, age: int) => "";
+	}
+
+	
+	function set_age(int age) -> bool 
+	{
+		if age <= 0 { return false };
+		return true;
+	}
+}
+
+
+
+function greeting(string name)  {
+	print("Hello", name);
+}
+
+function greeting(string name) -> string {
+	return "Hello {name}";
+}
+
+function greeting(string name) = "Hello {name}";
+
+const greeting = (string name) => "Hello {name}";
+
