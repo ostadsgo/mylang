@@ -1,0 +1,28 @@
+/* functions are callable block of codes */
+/* => used in one line operation and act like return in function. */
+/* => return and one line block of code! */
+
+
+add :: (x: int, y: int) {
+    return x + y;
+}
+
+
+div :: (x: int, y: int) -> float  => if y == 0 => null else => x / y;
+
+
+
+checkPassword :: (adminPasswd: string, passwd: string) -> bool 
+    => if adminPasswd == passwd => true else false;
+
+isEven :: (n: int) -> bool {
+    if n % 2 == 0 {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+isEven :: (int: int) -> bool => if n % 2 == 0 => true else => false;
+

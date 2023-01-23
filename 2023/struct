@@ -1,0 +1,28 @@
+Person := struct {
+    name: string;
+    age: int;
+}
+
+peter = Person();
+peter.name = "Peter Parker";
+peter.age = 23;
+
+
+
+/* print information for the peter struct */
+info := function(person: Person) {
+    print("My name is {person.name} and I am {person.age} year old.");
+}
+
+
+info(peter);
+
+
+/* print information using struct method syntax */
+Person.info := function(self) {
+    print("My name is {self.name} and I am {self.age} year old.");
+}
+
+peter.info();
+Person.info(peter);
+

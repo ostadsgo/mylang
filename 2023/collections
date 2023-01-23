@@ -1,0 +1,41 @@
+/* This is a comment
+ * How am I going to define an `array` and `hashmap`
+ *
+*/
+
+/* Define and use of `array` */
+
+/* define an array with 3 values */
+numbers := [1, 2, 3];
+
+/* equivelent code of above */
+/* this syntax blow is useless 
+ * becuse I can do same thing with 
+ * type delcoration array[int,3] = [1, 2, 3];
+*/
+number := array(int, 3, [1, 2, 3]);
+
+/* how array initializer work? */
+
+variableName := array(<types>, <length>, <initValue>);
+
+/* Creating array using type definition. */
+numbers: array[int, 10]; /* [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+numbers[1] = 10; /* [0, 10, 0, 0, 0, 0, 0, 0, 0, 0] */
+
+/* dynamic length */
+numbers: array[int|str, ...] = [1, 2, 3];
+numbers.append(4); 
+numbers.insert(10, 10); /* !!! */
+
+
+/* array can have different type compiler will detect them */
+mixed := [1, 'a', "hello"];
+
+
+
+/* HASH MAP Key value pair */
+
+person : [str: str, 3] = ["name": "John Doe", "age": 42, "location": "Unkown"];
+person["name"];   /* John Doe */
+
