@@ -1,3 +1,4 @@
+/* Maybe use the word type insted of struct */
 Person := struct {
     name: string;
     age: int;
@@ -6,6 +7,31 @@ Person := struct {
 peter = Person();
 peter.name = "Peter Parker";
 peter.age = 23;
+
+bob = Person(name="Bob Doe", age=20);
+
+
+// Create method for a struct 
+// 1
+@method(Person)
+info := (self: Person) -> string {
+    return "My name is {self.name} and I am {age} years old.";
+}
+
+peter.info();
+bob.info();
+Person.info(peter);
+Person.info(bob);
+
+// 2
+Person.info := (self: Person) -> string {
+    return "My name is {self.name} and I am {age} years old.";
+}
+
+peter.info();
+bob.info();
+Person.info(peter);
+Person.info(bob);
 
 
 
