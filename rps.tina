@@ -1,0 +1,6 @@
+random = import("math/random")
+
+choice = random.choice
+
+// 
+

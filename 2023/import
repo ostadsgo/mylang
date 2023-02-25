@@ -1,0 +1,42 @@
+random :: import("random");
+math :: import("~/libs/math");
+date :: import("datetime/date");
+
+sin = math.sin;
+PI = math.pi;
+Date = date.Date;
+
+random.choices([1, 2, 3, 4]);  // 2
+
+print(sin(90));  // 1
+
+name := "John Doe";
+
+Person :: struct {
+    first_name: [string, 50];
+    last_name: [string, 50];
+    age: int;
+    date_of_birth: Date; 
+    address: string;
+}
+
+Person.get_age :: (self) -> int {
+    return self.age;
+}
+
+Person.set_age :: (self, age) {
+    if age >= 0:
+        self.age = age;
+    raise ValueError("Age must be greather than zero.");
+}
+
+Person.claculate_age :: (self) -> int {
+    this_year :: date.today.year;
+    self.age = this_year - date_of_birth.year;
+    return self.age;
+}
+
+peter = Person("Peter", "Parker", 23, Date(1994, 1, 17), "NY, Padelston st. N. 12");
+peter.claculate_age();
+peter.age;
+

@@ -1,16 +1,20 @@
 /* functions are callable block of codes */
 /* => used in one line operation and act like return in function. */
 /* => return and one line block of code! */
+/** Why you need a function keyword
+ ** If this language were able to pass a function as argument
+ ** to another function how you are going to show the type of it?
+ ** you have to use eighter a keyword or a symbol.
+**/
 
 
-add :: (x: int, y: int) {
+
+add :: (x: int, y: int) -> int {
     return x + y;
 }
 
 
 div :: (x: int, y: int) -> float  => if y == 0 => null else => x / y;
-
-
 
 checkPassword :: (adminPasswd: string, passwd: string) -> bool 
     => if adminPasswd == passwd => true else false;
@@ -24,5 +28,18 @@ isEven :: (n: int) -> bool {
     }
 }
 
-isEven :: (int: int) -> bool => if n % 2 == 0 => true else => false;
+isEven :: (n: int) => if n % 2 == 0 => true else => false;
+
+
+f :: (number: int, fn: (x, y) -> int) -> int;
+
+f :: ();
+f();
+
+addOne :: (x) -> int {
+    return x + 1;
+}
+addOne(4);  /* 5 */
+
+addOne :: (x) -> int => x +  1;
 

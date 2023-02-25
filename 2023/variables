@@ -1,0 +1,74 @@
+/* I am not sure what is the best way to define a variable
+** I try to write simple varaible definition in diffrent way to 
+** hopefully find the best way of define a variable.
+*/
+
+/* First and most import thing is that the language must have a type inference. */
+
+// define variable with keyword
+// the most popular, short and concice keyword to define a varaible is `var` keyword.
+// Let's use it!
+
+// using keyword
+// define a variable with type inference.
+var message = "Hello World";
+message = "Hi World";
+
+// without type inference
+var message: string = "Hello World";
+
+// Second way using symbole like the language `jai` used
+// define  a variable 
+message := "Hello, World!";
+message = "Hi World";
+
+// declare type of the variable
+message : string = "Hello, World!";
+message = "Hi, World!";
+
+/* The `var` keyword is kind more readable than := symbole 
+** and it is easier for beginners to idendify varaibles
+** but := are concice and better in general
+** the problem with symboles are they are limited.
+*/
+
+// Constant
+const PI = 3.14159;
+
+// Constant
+PI :: 3.14159;
+
+// Like the Second one.
+
+
+// define varaibles
+
+x := 1;
+y: int = 20;
+y++;
+name: string = "John";
+name = "Bob";
+
+// Define multiple variables in a single line
+a, b, c: int = 1, 2, 3;
+
+x: bool, s, c: string = true, "Hi", "something";
+
+// define a char
+ch := 'A';
+
+
+// define string
+s: string = "hello";
+
+// multi line string
+menu := """
+1) Add
+2) Edit
+3) Delete
+4) Display
+5) Exit
+""";
+
+// Raw version of the string
+s := "hello\nhi\thowday".raw()

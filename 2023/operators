@@ -1,0 +1,35 @@
+// I didn't diecided which symbol or keyword or even
+// a function is the best way to represent a operator
+// but I try my best to find the best way.
+
+
+// Arthimetic operators
+
+*    mul
+/    div
+%    rem
++    add
+-    sub
+^    expo
+\    int div
+
+// compression
+>
+<
+>= 
+<=
+!=
+
+
+// boolean
+and
+or
+not
+
+// membership
+in
+not in
+is
+is not
+
+

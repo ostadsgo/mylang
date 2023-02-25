@@ -35,7 +35,8 @@ mixed := [1, 'a', "hello"];
 
 
 /* HASH MAP Key value pair */
-
 person : [str: str, 3] = ["name": "John Doe", "age": 42, "location": "Unkown"];
+include ./colorschemes/3024dark.conf
 person["name"];   /* John Doe */
+
 
