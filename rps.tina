@@ -1,6 +1,42 @@
-random = import("math/random")
+random :: import("math/random");
 
-choice = random.choice
+/* Make a random charecter from rps */
+choice = random.choice(["r", "p", "s"]);
 
-// 
+
+/* infinite loop */
+for {
+    user_choice := input("What is your hand ['r', 'p', 's']: ");
+
+    if user_choice == choice {
+        print("Draw");
+    }
+    // user
+    elif user_choice == 'r' and choice == 's' {
+        print("Rock crash scissors");
+        print("User win")
+    }
+    elif user_choice == 'p' and choice == 'r' {
+        print("Paper overs Rock.");
+        print("User win")
+    }
+    elif user_choice == 's' and choice == 'p' {
+        print("Sissors cuts paper.");
+        print("User win")
+    }
+
+    // computer
+    elif choice == 'r' and user_choice == 's' {
+        print("Rock crash scissors");
+        print("Computer win")
+    }
+    elif choice == 'p' and user_choice == 'r' {
+        print("Paper overs Rock.");
+        print("Computer win")
+    }
+    elif choice == 's' and user_choice == 'p' {
+        print("Sissors cuts paper.");
+        print("Computer win")
+    }
+}
 

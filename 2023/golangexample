@@ -1,0 +1,32 @@
+
+// this is the go lang example
+func StatRandomNumbers(n int) (int, int) {
+	var a, b int
+	for i := 0; i < n; i++ {
+		if rand.Intn(MaxRnd) < MaxRnd/2 {
+			a = a + 1
+		} else {
+			b++
+		}
+	}
+	return a, b
+}
+
+
+/* this is the mylang equivlent */
+
+random :: import("random");
+
+StatRandomNumbers :: (n: int) -> (int, int) {
+    a, b: int;
+    for i in 0..len(n) {
+        if random.randint(MaxRnd) < MaxRnd {
+            a++;
+        }
+        else {
+            b++;
+        }
+    }
+    return a, b;
+}
+

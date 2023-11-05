@@ -32,7 +32,7 @@ Person.set_age :: (self, age) {
 
 Person.claculate_age :: (self) -> int {
     this_year :: date.today.year;
-    self.age = this_year - date_of_birth.year;
+    self.age = this_year - self.date_of_birth.year;
     return self.age;
 }
 
