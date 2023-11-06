@@ -1,0 +1,53 @@
+
+/*-------------------
+** function
+** Functions are anonymous 
+** if there is main function programm will start from main function.
+*--------------------
+add :: (x: int, y: int) -> int {
+	return x + y;
+}
+
+/* implicit return */
+add :: (x: int, y: int) -> int = x + y;
+
+http_error :: (s: string) -> (int, int) {
+    return 0, 1;
+}
+
+/* main function with args */
+main :: (args: [str]) {
+
+}
+
+print_hello :: function {
+    print("Hello");
+}
+
+print_hello :: () {
+    print("Hello");
+}
+
+
+/* defualt parameter */
+add :: (x:= 0, y := 0) -> int {
+    return x + y;
+}
+
+
+/* considration */ 
+/* on line functions */
+add :: (x: int , y: int) -> int => x + y;
+/* or */
+add :: (x: int , y: int) -> int = x + y;
+/* if it possiable */
+add :: (x: int , y: int) -> x + y;
+
+
+/* using one line functions in higher order functions or methods */
+map((x) -> x ** 2, [1, 2, 3, 4]); /* => 1, 4, 9, 16 */
+map((x) => x ** 2, [1, 2, 3, 4]); /* => 1, 4, 9, 16 */
+
+/* -> for declaring return type => for the value returns */
+
+

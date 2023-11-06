@@ -1,0 +1,38 @@
+/*-------------------
+**    String
+** immutable collection of chars.
+** 
+*--------------------
+name: string = "John Doe";
+my_name := "John Doe";
+
+/* multi-line string */
+par := """
+There is 10 types of people in the world
+who knows binary and who don't.""";
+
+/* string slice */
+varname[start..end];
+name[0] /* => J */
+name[0..4] /* => John */
+name[..4] /* => John */
+name[6..] /* => Doe */
+name[..] /* => John Doe */
+
+/* negative indexing */
+name[-1]; /* => e */
+name[-3..]; /* => Doe */
+name[..-4]; /* => John */
+name[-8..-4]; /* => John */
+
+
+/* fromatted string */
+name :: "John Doe";
+age := 42;
+s := "My name is {name} and I am {age} years old.";
+print(s); /* => My name is John Doe and I am 42 years old."
+
+/* => I am going to be 43 years old next year. */
+print("I am going to be {age++} years old next year.");
+
+

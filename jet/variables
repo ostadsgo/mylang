@@ -1,0 +1,13 @@
+/*-------------------
+*     Variables
+*--------------------
+/* could be changed after initialize; */
+
+var_name := value;
+var_name: <type> = <value>;
+
+
+/* example */ 
+age := 42;
+age = 43;
+

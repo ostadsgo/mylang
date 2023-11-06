@@ -6,7 +6,11 @@ choice = random.choice(["r", "p", "s"]);
 
 /* infinite loop */
 for {
-    user_choice := input("What is your hand ['r', 'p', 's']: ");
+    user_choice := input("What is your hand ('r', 'p', 's') or q to quit: ");
+    
+    if user_choice == 'q' {
+        break
+    }
 
     if user_choice == choice {
         print("Draw");

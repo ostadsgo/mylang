@@ -59,44 +59,6 @@ e :: 2.17;
   is 
   is not
 
-/*-------------------
-*     Variables
-*--------------------
-/* could be changed after initialize; */
-
-var_name := value;
-var_name: <type> = <value>;
-
-age := 42;
-age = 43;
-
-
-/*-------------------
-**    String
-** immutable collection of char.
-** 
-*--------------------
-name: string = "John Doe";
-my_name := "John Doe";
-
-/* multi-line string */
-par := """
-There is 10 types of people in the world
-who knows binary and who don't.""";
-
-/* string slice */
-varname[start..end];
-name[0] /* => J */
-name[0..4] /* => John */
-name[..4] /* => John */
-name[6..] /* => Doe */
-name[..] /* => John Doe */
-
-/* negative indexing */
-name[-1]; /* => e */
-name[-3..]; /* => Doe */
-name[..-4]; /* => John */
-name[-8..-4]; /* => John */
 
 /*-------------------
 ** Array
@@ -186,33 +148,6 @@ i := 0;
 for i < 10 {
 
     i++;    
-}
-/*-------------------
-** function
-** 
-** 
-*--------------------
-add :: (x: int, y: int) -> int {
-	return x + y;
-}
-
-/* implicit return */
-add :: (x: int, y: int) -> int = x + y;
-
-http_error :: (s: string) -> (int, int) {
-    return 0, 1;
-}
-
-main :: (args: [str]) {
-
-}
-
-print_hello :: function {
-    print("Hello");
-}
-
-print_hello :: () {
-    print("Hello");
 }
 /*-------------------
 ** Struct

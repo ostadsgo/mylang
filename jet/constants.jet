@@ -1,0 +1,17 @@
+/*-------------------
+*     Constants 
+*--------------------
+* Cann't change after initialized.
+* It's evealuted at compile time.
+* No need to declare type of the value
+*/
+
+
+/* pattern */
+const_name :: <value>;
+
+
+/* example */
+NAME :: "John Doe";
+PI :: 3.14159;
+e :: 2.17;
