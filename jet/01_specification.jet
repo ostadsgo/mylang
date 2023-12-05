@@ -1,0 +1,17 @@
+/* 
+** developer friendly, easy to learn, intutive
+** Compiled, Statically with type inference programming language.
+** Fast compile time like go Fast run time like C
+** General purpose programming language
+** C like syntax
+** Immutiblity first
+** Privaty first
+** Prefer methods over functions
+** Prefer functions over statements and keywords
+** Every line of code will end with semicolon.
+** No GC for memeory management
+** No OOP
+**
+**/
+
+

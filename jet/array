@@ -1,0 +1,16 @@
+/* 
+** Array or list 
+*/
+
+
+names : [str] = ["John", "Bob", "Kate"];
+
+/* ... mean daynamic length which is the defualt in arrays */
+names : [str, ...] = ["John", "Bob", "Kate"];
+
+/* the length of the array alwayse is the last value in type hint */
+names : [str, 10] = ["Elon", "Jeff", "Steve"];
+names.push("Robbert");
+names.push("Andrew");
+
+names[0..3]; /* => ["Elon", "Jeff", "Steve"] */

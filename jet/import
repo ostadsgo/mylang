@@ -1,0 +1,38 @@
+
+
+/* every module is just jet lang file */
+/* import a module */
+
+math :: import("math.jet");
+
+* import all name in global state not recommend bad practice */
+import("math.jet");
+
+/* import from custom path */
+mymod :: import("~/programs/libs/mymodule.jet");
+
+
+/* using methods and functions of a module */
+math.log2(16);  /* 4.0 */
+math.pow(2, 3); /* 8.0 */
+
+/* example of usefulness of global importing names */
+import("aliases.jet");
+
+/* inside of aliases 
+
+i32 :: alias(int32);
+i64 :: alias(int64);
+i128 :: alias(int128);
+
+*/
+
+x : i32;
+y : i128;
+
+
+/* alias name of functions or method that imported from a module. */
+math :: import("math.jet);
+logorithm2 :: alias(math.log2);
+
+

@@ -1,0 +1,25 @@
+
+
+iseven :: (n: int) -> bool {
+    if n % 2 == 0 {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+iseven :: (n: int) => not n % 2 
+
+filter(iseven, [2, 3, 4]);
+
+
+numbers = [1, 2, 3, 4, 5];
+numbers.filter(it % 2 == 0);
+numbers.filter(it => it % 2 == 0);
+numbers.filter(x, y => x > 1 and y > 5);
+
+
+for i in 1..100 {
+    print(iseven(i));
+}
+
