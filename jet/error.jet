@@ -1,0 +1,18 @@
+io :: import("io")
+read :: io.read;
+
+
+read_file_contents :: (file_path: string) -> string | io.error {
+    file := open(file_path);
+    content :: file.read();
+    file.close();
+
+    Ok(contents)
+}
+
+fn main() {
+    match read_file_contents("example.txt") {
+        Ok(contents) => println!("File contents: {}", contents),
+        Err(err) => eprintln!("Error reading file: {}", err),
+    }
+}

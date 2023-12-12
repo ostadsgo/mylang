@@ -1,17 +1,41 @@
 /* 
 ** developer friendly, easy to learn, intutive
 ** Compiled, Statically with type inference programming language.
-** Fast compile time like go Fast run time like C
+** Fast compile time like go minimal run time like C
 ** General purpose programming language
 ** C like syntax
-** Immutiblity first
-** Privaty first
+** Immutiblity first, Privaty first
 ** Prefer methods over functions
-** Prefer functions over statements and keywords
+** Prefer functions over statements and keywords.
+** Prefer methods over functions.
 ** Every line of code will end with semicolon.
+** handle Error as a value.
 ** No GC for memeory management
 ** No OOP
-**
+** No exceptions, no try catch
 **/
 
+
+
+/* Consideration 
+** --------------
+** Error handling, Error as a value
+** using functions or methods (I prefer method oriented.)
+** ---------------
+*/
+
+
+/* keywords
+** -------------
+** control flow : for if match
+** 
+** -------------
+*/
+
+/* Operators 
+** -------------
+** Arthimetics operators : + - * / % ++ -- ** // 
+** Boolean operators : not and or
+** Bitwise operators : ! & | ^
+*/
 

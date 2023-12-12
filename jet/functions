@@ -4,6 +4,9 @@
 ** Functions are anonymous 
 ** if there is main function programm will start from main function.
 *--------------------
+/* do I need add a keyword `function` */
+main :: ();
+
 add :: (x: int, y: int) -> int {
 	return x + y;
 }
@@ -29,9 +32,6 @@ main :: (args: [str]) {
 
 }
 
-print_hello :: function {
-    print("Hello");
-}
 
 print_hello :: () {
     print("Hello");
@@ -39,7 +39,7 @@ print_hello :: () {
 
 
 /* defualt parameter */
-add :: (x:= 0, y := 0) -> int {
+add :: (x := 0, y := 0) -> int {
     return x + y;
 }
 
@@ -47,6 +47,8 @@ add :: (x:= 0, y := 0) -> int {
 /* considration */ 
 /* on line functions */
 add :: (x: int , y: int) -> int => x + y;
+/* type inference on return value. */
+add :: (x, y: int) => x + y;
 /* or */
 add :: (x: int , y: int) -> int = x + y;
 /* if it possiable */

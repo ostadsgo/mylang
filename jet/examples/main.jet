@@ -1,0 +1,13 @@
+/* jet lang doensn't require main function.
+** how ever if main function exist program 
+** will start from main function.
+*/
+
+/* hello world wihtout man function. */
+print("hello world");
+
+/* main function */
+main :: (args: array[str]) {
+   print("Hello world!"); 
+}
+

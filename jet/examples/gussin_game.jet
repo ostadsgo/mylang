@@ -1,0 +1,101 @@
+/**------------------------
+** Version 0.1
+** ------------------------/
+random :: impmort("random");
+random_number :: random.randrange(1,100);
+
+for {
+    user_guess := input("Enter a guess: ").int();
+    if user_guess < random_number {
+        print("Too Low");
+    } else if user_guess > random_number {
+        print("Too High");
+    } else {
+        print("You win.")
+        break;
+    }
+}
+
+
+/**------------------------
+** Version 1
+** ------------------------/
+random :: impmort("random");
+get_random :: random.randrange;
+
+
+check_user_guess :: (guess, number: int) -> int {
+    if guess < number {
+        return "low";
+    } else if guess > number {
+        return "high";
+    } else {
+        return "win"
+    }
+}
+
+
+main :: () {
+    guess_range :: [1, 100];
+    result_message :: ["low": "Too low", "high": "Too high", "win": "congratution, You win."]
+    /* unpack number to positional arguments of get_random */
+    random_number :: get_random(*guess_range);
+
+    for {
+        user_guess := input("Enter a guess: ");
+        if not user_guess.isdigit() {
+            print("Please enter a number between {number[0]}..{number[1]}")
+            continue;
+        }
+
+        /* function determine user entered number state */
+        check_result := check_user_guess(user_guess, number);
+        print(RESULT_MESSAGE.get(check_result));
+    }
+} /* end of main function. */
+
+
+
+/**------------------------
+** Version 1.1
+** ------------------------/
+random :: impmort("random");
+get_random :: random.randrange;
+
+Message :: enum {
+    LOW :: "Low";
+    HIGHT :: "High";
+    WIN :: "Win";
+}
+
+check_user_guess :: (guess, number: int) -> int {
+    if guess < number {
+        return "low";
+    } else if guess > number {
+        return "high";
+    } else {
+        return "win";
+    }
+}
+
+
+main :: () {
+    guess_range :: [1, 100];
+    result_message :: ["low": "Too low", "high": "Too high", "win": "You win."];
+    random_number :: get_random(*guess_range);
+
+    for {
+        user_guess := input("Enter a guess: ");
+        if not user_guess.isdigit() {
+            print("Please enter a number between {number[0]}..{number[1]}")
+            continue;
+        }
+
+        /* function determine user entered number state */
+        check_result := check_user_guess(user_guess, number);
+        print(result_message.get(check_result));
+    }
+} /* end of main function. */
+
+
+

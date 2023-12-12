@@ -1,12 +1,19 @@
+fact :: (n: int) -> int {
+    f := 1;
+    for number in 1..n {
+        f *= number;
+    }
+    return f;
+}
+
 /* defining a function to calculate factorial of a number */
 factorial :: (n: int) -> int {
     if n == 0 {
         return 1;
-    }
-    else {
+    } else {
         return n * factorial(n - 1);
     }
-}; /* end of the factorial function */
+} /* end of the factorial function */
 
 /* calling and using the factorial function. */
 n :: 5;
@@ -15,8 +22,7 @@ print("{n} factorial is {res});
 
 
 /* v2 */
-
 factorial :: (n: int) -> int {
     return 1 if n == 0 else n * factorial(n - 1);
-}; /* end of the factorial function */
+} /* end of the factorial function */
 

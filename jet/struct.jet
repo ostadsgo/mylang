@@ -1,0 +1,32 @@
+type Male :: 1;
+type Fmale :: 2;
+type Other :: 3;
+type Gender : Male | Famale | Other;
+
+Person :: struct {
+    first_name: str;
+    last_name: str;
+    age: int;
+    gender: Gender;
+}
+
+/* Create a person */
+elon = Person(firstn_name="Elon", last_name="Musk", age=48, gender=Gender.Male);
+
+/* Create method for a struct */
+is_adult :: (person: self) => person.age >= 18;
+
+
+print(elon.is_adult()); /* => true */
+/* or maybe */
+print(elon.is_adult);  /* => true */
+/* the problem with the code above is if I use obj.method vs obj.method()
+** is I need to find a way to refercence for the method.
+** math :: import("math");
+** sin :: math.sin;   /* is this a call or reference of the method. */
+*/
+
+Person.is_adult :: () {
+}
+
+

@@ -1,7 +1,6 @@
-
-
-/* every module is just jet lang file */
-/* import a module */
+/* every module is just jet lang file
+** import a module 
+*/
 
 math :: import("math.jet");
 
@@ -19,7 +18,9 @@ math.pow(2, 3); /* 8.0 */
 /* example of usefulness of global importing names */
 import("aliases.jet");
 
+
 /* inside of aliases 
+** type aliases.
 
 i32 :: alias(int32);
 i64 :: alias(int64);
@@ -33,6 +34,6 @@ y : i128;
 
 /* alias name of functions or method that imported from a module. */
 math :: import("math.jet);
-logorithm2 :: alias(math.log2);
-
+/* or */
+logrithm2 :: math.log2; /* not call the function make ref to func */
 

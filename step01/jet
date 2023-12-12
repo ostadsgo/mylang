@@ -1,0 +1,27 @@
+#! /usr/bin/python
+
+import sys
+from lexer import Lexer
+
+def read_file(filename: str) -> str:
+    source_code = ""
+    with open(filename, "r") as f:
+        source_code = f.read()
+    return source_code
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("You must enter filename like `filename.jet")
+        return
+
+    _, filename = sys.argv
+    source_code = read_file(filename)
+    lexer = Lexer(source_code)
+    tokens = lexer.tokenize()
+    print(tokens)
+
+
+
+if __name__ == "__main__":
+    main()
