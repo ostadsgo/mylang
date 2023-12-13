@@ -16,6 +16,39 @@ elon = Person(firstn_name="Elon", last_name="Musk", age=48, gender=Gender.Male);
 /* Create method for a struct */
 is_adult :: (person: self) => person.age >= 18;
 
+/* well there is problem when we create method like above
+** if you have two struct that have is_adult method which one 
+** is which I mean names are going to be confilict
+** I like the approch above if the the first parameter was struct instance
+** it is method for the struct;
+** So what about the solution in the below
+*/
+
+Dog :: struct {
+    name: str;
+    age: int;
+}
+
+is_adult :: (dog: Dog) -> bool {
+    return dog.age > 4;
+}
+
+hurmen :: Dog("Huermen", 7);
+Dog.is_adult(hurmen);
+humen.is_adult();
+
+
+/* Maybe */
+elon.is_adult();
+Person.is_adult(elon); /* same as above */
+assert(elon.is_adult() == true);
+
+/* in the cenario above if you change your struct name you have to change
+** struct name for every method you defined.
+**/
+
+
+
 
 print(elon.is_adult()); /* => true */
 /* or maybe */
@@ -26,7 +59,5 @@ print(elon.is_adult);  /* => true */
 ** sin :: math.sin;   /* is this a call or reference of the method. */
 */
 
-Person.is_adult :: () {
-}
 
 
