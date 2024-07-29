@@ -22,7 +22,7 @@ http_error :: (s: string) -> (int, int) {
 
 /* naked return */
 http_error :: (s: string) -> (status, msg) {
-    code :: "200";
+    status :: "200";
     msg :: "ok";
     return;
 }

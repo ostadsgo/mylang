@@ -14,7 +14,7 @@ Person :: struct {
 elon = Person(firstn_name="Elon", last_name="Musk", age=48, gender=Gender.Male);
 
 /* Create method for a struct */
-is_adult :: (person: self) => person.age >= 18;
+is_adult :: (person: Person) => person.age >= 18;
 
 /* well there is problem when we create method like above
 ** if you have two struct that have is_adult method which one 
@@ -29,12 +29,10 @@ Dog :: struct {
     age: int;
 }
 
-is_adult :: (dog: Dog) -> bool {
-    return dog.age > 4;
-}
+Dog.is_adult :: (dog: Dog) => dog.age > 4;
 
 hurmen :: Dog("Huermen", 7);
-Dog.is_adult(hurmen);
+Dog.is_adult(hurmen);  // Call using struct name
 humen.is_adult();
 
 
@@ -60,4 +58,18 @@ print(elon.is_adult);  /* => true */
 */
 
 
+// using decorator
 
+
+// 1
+@method(Perosn)
+is_adult :: (person: Person) => person.age >= 18;
+
+
+// 2
+Perosn.is_adult :: (person: Person) => person.age >= 18;
+
+
+elon = Perosn(name="Elon Musk", age=50);
+elon.is_adult();
+Perosn.is_edult(elon);
