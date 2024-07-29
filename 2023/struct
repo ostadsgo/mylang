@@ -52,3 +52,27 @@ Person.info := function(self) {
 peter.info();
 Person.info(peter);
 
+
+
+;; create struct function
+
+Person :: struct(name: string, age: uint, country: string);
+
+;; Create method for the Person struct.
+Person.is_adult :: (self) -> bool {
+  if self.age >= 18 {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+;; Create method for the Person struct.
+Person.is_adult :: (self) => true if self.age >= 18 else false;
+
+
+;; create new type
+ShoppingList :: type(list[string]);
+
+grocery: ShoppingList = ["Milk", "Bread", "Banana"];
+

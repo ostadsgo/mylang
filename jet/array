@@ -13,7 +13,7 @@ names : [str, 10] = ["Elon", "Jeff", "Steve"];
 names.push("Robbert");
 names.push("Andrew");
 
-names[0..3]; /* => ["Elon", "Jeff", "Steve"] */
+names[0..3];  /* => ["Elon", "Jeff", "Steve"] */
 
 
 /* vector */
@@ -29,7 +29,6 @@ vector.extend([1, 4, 9]);
 data = [1, 4, 9];
 vector.extend(data);
 
-
 a1 : array[int] = [1, 2, 3];
 a2 : array[int] = [3, 2, 1];
 assert(len(a1) == len(a2)); 
@@ -38,3 +37,5 @@ new_arr := a1 + a2;  /* => [1, 2, 3, 3, 2, 1] */
 
 mylist : List[int, str];
 mylist := [1, 2, 3] + ['a', 'b', 'c'];
+
+

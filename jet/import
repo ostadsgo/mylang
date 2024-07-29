@@ -37,3 +37,33 @@ math :: import("math.jet);
 /* or */
 logrithm2 :: math.log2; /* not call the function make ref to func */
 
+
+/* export problem while you have same function name with different parameter
+** If the language have the feature of function overwritting which is going to be happend
+** with the functions have the same name with different parameters how you are going to 
+** export them?
+**/
+
+
+math :: import("math");
+PI :: math.PI;
+exports = [
+    add(a, b: int),
+];
+export(...exports); /* which add function? */
+
+add :: (a, b: int) -> int {
+    return a + b * PI;
+}
+
+add :: (a, b, c: int) -> int {
+    return a + b + c;
+}
+
+
+
+
+
+
+
+

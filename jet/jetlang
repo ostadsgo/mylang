@@ -16,7 +16,7 @@
 */
 
 /* pattern */
-const_name :: <value>;
+CONST_NAME :: <value>;
 
 /* example */
 NAME :: "John Doe";
@@ -82,6 +82,8 @@ my_list: list [string, int, float] = ["milk", 1, 3.12, "hello"];
 person: list[string, int];
 person = ["John Doe", 42, "London"];
 
+Person : type : type(list[string, int]);
+peter: Person = ["Peter Parker", 19];
 
 /*-------------------
 ** map aka dict
@@ -149,6 +151,12 @@ for i < 10 {
 
     i++;    
 }
+
+/* create defualt `it` as iterator */
+for items {
+    print(it);
+}
+
 /*-------------------
 ** Struct
 ** 
@@ -167,7 +175,8 @@ peter.name; /* => Peter Parker */
 Person.is_adult :: (self: Self) -> bool {
     if self.age >= 18 {
         return true;
-    return false;
+    } else {
+        return false;
     }
 }
 peter.is_adult(); /* => true */

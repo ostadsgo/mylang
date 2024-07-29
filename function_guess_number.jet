@@ -1,0 +1,35 @@
+random :: import("random.jet");
+randrange :: random.randrange;
+
+
+random_number :: randrange(1, 100);
+
+
+function compare(user_guess: int, random_number: int) -> int {
+  if user_guess > random_number {
+    return 1;
+  } elif user_guess < random_number {
+    return -1;
+  } else {
+    return 0;
+  }
+
+
+
+
+guess_counter := 0;
+
+
+for {
+  uesr_guess := input("Enter your guess\n> ");
+  guess_counter++;
+  if compare(user_guess, random_number) == 0 {
+    print("Congragulation.");
+    print("You guessed it with {guess_counter} times.);
+  } elif compare(user_guess, random_number) == 1 {
+    print("guess smaller.");
+  } else {
+    print("guess bigger.");
+  }
+
+}

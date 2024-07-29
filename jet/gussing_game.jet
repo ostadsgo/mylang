@@ -1,0 +1,20 @@
+random :: import("random.jet");
+randrange :: random.randrange;
+
+
+random_number :: randrange(1, 100);
+guess_counter := 0;
+for {
+  uesr_guess := input("Enter your guess\n> ");
+  guess_counter++;
+  if user_guess == random_number {
+    print("Congragulation.")
+    print("You guessed it {guess_counter}");
+  }
+  elif user_guess > random_number {
+    print("Guess smaller.")
+  }
+  else {
+    print("Guess bigger");
+  }
+}
