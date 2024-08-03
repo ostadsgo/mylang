@@ -4,10 +4,8 @@
 ** Fast compile time like go minimal run time like C
 ** General purpose programming language
 ** C like syntax
-** Immutiblity first, Privaty first
 ** Prefer methods over functions
 ** Prefer functions over statements and keywords.
-** Prefer methods over functions.
 ** Every line of code will end with semicolon.
 ** handle Error as a value.
 ** No GC for memeory management

@@ -1,0 +1,27 @@
+/*-------------------
+*     Variables
+*--------------------
+/* 
+** pice of memory with name;
+** could be changed after initialize; 
+*/
+
+
+
+var_name := value;
+var_name: <type> = <value>;
+
+
+/* example */ 
+age := 42;
+age = 50;
+
+
+// example 2
+age: int;  // initialized with 0
+age = 44; // change the value of age to be 44
+
+age: int = 40;
+age = 60;
+
+
