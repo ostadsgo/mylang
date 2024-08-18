@@ -1,0 +1,32 @@
+// if function, one line if
+x :: 5;
+res :: if(x > 0, "hello", "goodbye");  // hello
+
+
+// cast typs
+cast(int, "43");  // 43
+
+// access tuple or even maybe array
+status :: (404, "not found");
+status.item(0);   // status[0]
+
+
+
+// tuple
+status :: (404, "not found");
+status[0]; // 404
+
+status :: (code: 404, msg: "not found");
+status.code;  // 404
+
+Color :: enum(Red, Green, Blue;}
+
+color = Color.Red;
+match color {
+  .Red => print("It's a red.");
+  .Green => print("It's a green.");
+  .Blue => print("It's a blue.");
+  else => print("Unknown color.");
+}
+
+

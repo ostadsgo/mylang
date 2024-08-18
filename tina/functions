@@ -12,7 +12,8 @@ add :: (x: int, y: int) -> int {
 }
 
 /* implicit return */
-add :: (x: int, y: int) -> int = x + y;
+add :: (x: int, y: int) -> int => x + y;
+add :: (x, y: int) => x + y;
 
 http_error :: (s: string) -> (int, int) {
     status_code :: 200;
@@ -39,8 +40,7 @@ print_hello :: () {
 
 
 /* defualt parameter */
-add :: (x := 0, y := 0) -> int {
-    return x + y;
+add :: (x := 0, y := 0) =>  x + y;
 }
 
 
