@@ -17,9 +17,8 @@ age := 42;
 age = 50;
 
 
-// example 2
-age: int;  // initialized with 0
-age = 44; // change the value of age to be 44
+age: int;  
+age = 44; 
 
 age: int = 40;
 age = 60;

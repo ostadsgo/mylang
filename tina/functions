@@ -58,6 +58,7 @@ add :: (x: int , y: int) -> x + y;
 /* using one line functions in higher order functions or methods */
 map((x) -> x ** 2, [1, 2, 3, 4]); /* => 1, 4, 9, 16 */
 map((x) => x ** 2, [1, 2, 3, 4]); /* => 1, 4, 9, 16 */
+map((x) { x ** 2 }, [1, 2, 3, 4]);
 
 /* -> for declaring return type => for the value returns */
 

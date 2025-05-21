@@ -1,0 +1,28 @@
+/* namespace is used to categorized different part of codes to reduce file
+ usage in program. the defualt namespace is global namespace any namesapce
+ without name blong to global namespace.*/
+
+/* global namespace */
+
+w := 0;
+h := 1;
+
+
+rectangle :: namespace {
+  x :: 0;
+
+  area :: (w, h: int) => w * h; 
+  premiter :: (w, h: int) => 2 * (w + h);
+}
+
+@private
+square :: namespace {
+  area :: (a: int) => a * 2; 
+  premiter :: (a: int) => a * 4;
+}
+
+main :: () {
+  square.area(10);  /* 20 */
+  sqr :: square;
+  sqr.premiter(10); /* 40 */
+}
